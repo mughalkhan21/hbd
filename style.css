@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.heart{
+    background-color: transparent;
+    height: 60px;
+    display: flex;
+}
+.heart:hover{
+    animation: hbeat 0.5s infinite ease-in-out ;
+}
+@keyframes hbeat {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.1;
+    }
+}

@@ -1,16 +1,4 @@
-alert("Find And Click The One With Different Colour");
-
-
-function newPage(){
-    alert("Wooohoooo You Find It!")
-}
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const wishButton = document.getElementById('wishButton');
-    const personalMessage = document.getElementById('personalMessage');
     const canvas = document.getElementById('confettiCanvas');
     const ctx = canvas.getContext('2d');
     const celebrationSound = document.getElementById('celebrationSound');
@@ -23,14 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createConfetti() {
         const colors = ['#ff6347', '#ff4500', '#32cd32', '#4682b4', '#ffd700'];
-        const numParticles = 150;
+        const numParticles = 200;
         for (let i = 0; i < numParticles; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 size: Math.random() * 10 + 2,
                 speedX: Math.random() * 4 - 2,
-                speedY: Math.random() * 5 + 2,
+                speedY: Math.random() * 6 + 2,
                 color: colors[Math.floor(Math.random() * colors.length)],
                 life: Math.random() * 100 + 50
             });
@@ -57,17 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animateConfetti);
     }
 
-    wishButton.addEventListener('click', () => {
-        personalMessage.textContent = "May this year bring you closer to your dreams and fill your life with happiness!";
-        personalMessage.classList.remove('hidden');
+    createConfetti();
+    animateConfetti();
 
-        // Play sound effect
-        celebrationSound.play();
-
-        // Trigger confetti animation
-        createConfetti();
-        animateConfetti();
-    });
+    celebrationSound.play();
 
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;

@@ -1,4 +1,4 @@
-alert("Find And Click The One With Different Colour");
+alert("Hey Kralitsa!!!Find And Click The One With Different Colour");
 
 
 function newPage(){

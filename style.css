@@ -15,6 +15,7 @@ body{
     background-color: transparent;
     height: 60px;
     display: flex;
+    margin : 2px;
     animation: hbeat 0.5s infinite ease-in-out ;
 }
 @keyframes hbeat {
